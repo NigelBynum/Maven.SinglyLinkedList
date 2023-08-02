@@ -53,7 +53,10 @@ public class SinglyLinkedList<T>  implements LinkedListIface {
 
     @Override
     public int size() {
-        return 0;
+       if(this.isEmpty()) return 0;
+       int n = 0;
+       do {} while (temp !=null);
+       return n;
     }
 
     @Override
@@ -81,9 +84,10 @@ public class SinglyLinkedList<T>  implements LinkedListIface {
             // print the data..
             sb.append("[" + temp.getData() + "] -> ");
             temp = temp.getNext();
+        }while ((temp != null));
         }
         // add NULL
         sb.append("NULL");
         return sb.toString();
-    }//
+    }
     }

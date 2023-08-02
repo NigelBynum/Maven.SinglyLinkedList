@@ -6,33 +6,38 @@ import org.junit.Test;
  */
 public class SinglyLinkedListTest {
     @Test
-    public void testConstructor(){
+    public void testConstructor() {
         SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
         Assert.assertNotNull(llist);
     }
+
     @Test
-    public void testIsEmpty(){
+    public void testIsEmpty() {
         SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
-        Assert.assertEquals( true, llist.isEmpty());
+        Assert.assertEquals(true, llist.isEmpty());
     }
+
     @Test
-    public void testAdd1(){
+    public void testAdd1() {
         SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
         llist.add(1);
-        Assert.assertEquals( false, llist.isEmpty());
+        Assert.assertEquals(false, llist.isEmpty());
     }
+
     @Test
-    public void testAdd2(){
+    public void testAdd2() {
         SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
         llist.add(2);
-        Assert.assertEquals( false, llist.isEmpty());
+        Assert.assertEquals(false, llist.isEmpty());
     }
+
     @Test
     public void testToString() {
         SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
         String expected = "head -> NULL";
         Assert.assertEquals(expected, llist.toString());
     }
+
     @Test
     public void testToString1() {
         SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
@@ -41,6 +46,7 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(expected, llist.toString());
 
     }
+
     @Test
     public void testToString2() {
         SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
@@ -49,5 +55,22 @@ public class SinglyLinkedListTest {
         String expected = "head -> [1] -> [2] -> NULL";
         Assert.assertEquals(expected, llist.toString());
 
+    }
+
+    // METHOD SIZE
+    @Test
+    public void testSize0() {
+        SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
+        Assert.assertEquals(0, llist.size());
+    }
+    @Test
+    public void testSize1() {
+        SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
+        Assert.assertEquals(1, llist.size());
+}
+    @Test
+    public void testSize2() {
+        SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
+        Assert.assertEquals(2, llist.size());
     }
 }
