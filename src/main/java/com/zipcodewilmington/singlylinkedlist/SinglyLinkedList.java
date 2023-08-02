@@ -85,5 +85,5 @@ public class SinglyLinkedList<T>  implements LinkedListIface {
         // add NULL
         sb.append("NULL");
         return sb.toString();
-    }
+    }//
     }
