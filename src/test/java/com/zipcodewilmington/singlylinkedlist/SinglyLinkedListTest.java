@@ -68,9 +68,16 @@ public class SinglyLinkedListTest {
         SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
         Assert.assertEquals(1, llist.size());
 }
+
+   // METHOD IIND
     @Test
-    public void testSize2() {
+    public void testFindo() {
+        SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
+        llist.add(1);
+        Assert.assertEquals(0, llist.size(data));
+    }
+    @Test
+    public void testSize1a() {
         SinglyLinkedList<Integer> llist = new SinglyLinkedList<>();
         Assert.assertEquals(2, llist.size());
-    }
 }

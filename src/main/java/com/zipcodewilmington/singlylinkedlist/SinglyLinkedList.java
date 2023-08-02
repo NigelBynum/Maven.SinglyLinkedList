@@ -48,7 +48,17 @@ public class SinglyLinkedList<T>  implements LinkedListIface {
 
     @Override
     public int find(Object data) {
-        return 0;
+        if(this.isEmpty()) return -1;
+        int found = -1;
+
+        Node<T> temp = head;
+        do{
+            found++;
+            if(temp.getData().equals(data))break;
+            temp = (temp.getNext());
+        } while (temp != null);
+
+        return found;
     }
 
     @Override
